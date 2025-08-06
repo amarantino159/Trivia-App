@@ -12,6 +12,7 @@ function Answer({ answer, falseanswers }) {
   let [possible, setPossible] = useState([]);
   let { playerScore, setPlayerScore } = useContext(ScoreContext);
 
+
   // add answer to falseanswers and shuffle
   // map falseanswers to buttons
   // each button has onClick to check if button value and answer ===
@@ -28,10 +29,10 @@ function Answer({ answer, falseanswers }) {
   return (<>
     {possible.map((elm) => <button onClick={() => {
       setChoice(elm)
-
+      setPlayerScore(playerScore + 1);
     }}>{elm}</button>)}
     <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice}</h1>
-
+    <h2>{playerScore}</h2>
   </>)
 }
 
