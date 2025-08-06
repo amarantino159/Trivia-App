@@ -4,3 +4,37 @@
 .wrong{
   color:red
 }
+
+.a0{
+  background-color: magenta;
+  font-weight: 800;
+  color: rgba(255, 255, 0, 0.932);
+  grid-area: 1/ 1/ 1/ 2;
+
+}
+.a1{
+  background-color: blue;
+  color: white;
+  font-weight: 800;
+   grid-area: 1/ 2/ 1/ 2;
+}
+.a2{
+  background-color: yellow;
+  font-weight: 800;
+  color: red;
+}
+.a3{
+  background-color: green;
+  color: white;
+  font-weight: 800;
+}
+
+.answer-container{
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 40% 40%;
+  width: 50%vh;
+  height: 400px;
+  margin-left: 120px;
+
+}
