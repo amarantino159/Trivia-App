@@ -26,10 +26,14 @@ function Answer({ answer, falseanswers }) {
     , [])
 
 
+
   return (<>
     {possible.map((elm) => <button onClick={() => {
       setChoice(elm)
-      setPlayerScore(playerScore + 1);
+      if(choice == answer){
+        setPlayerScore(playerScore + 1)
+
+      };
     }}>{elm}</button>)}
     <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice}</h1>
     <h2>{playerScore}</h2>
