@@ -1,235 +1,232 @@
-{
-  "response_code": 0,
-  "results": [
-    {
-      "type": "boolean",
-      "difficulty": "easy",
-      "category": "Entertainment: Music",
-      "question": "In 1993, Prince changed his name to an unpronounceable symbol because he was unhappy with his contract with Warner Bros.",
-      "correct_answer": "True",
-      "incorrect_answers": [
-        "False"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "medium",
-      "category": "Vehicles",
-      "question": "Which of these cars is NOT considered one of the 5 Modern Supercars by Ferrari?",
-      "correct_answer": "Testarossa",
-      "incorrect_answers": [
-        "Enzo Ferrari",
-        "F40",
-        "288 GTO"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "medium",
-      "category": "Entertainment: Video Games",
-      "question": "What is the item required to summon the boss Duke Fishron in the game Terraria?",
-      "correct_answer": "Truffle Worm",
-      "incorrect_answers": [
-        "Suspicious Looking Fish",
-        "King Grasshopper",
-        "Slug"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "medium",
-      "category": "Entertainment: Video Games",
-      "question": "Which of the following games in the Anno series introduced the &quot;Eco Balance&quot; gameplay mechanic?",
-      "correct_answer": "Anno 2070",
-      "incorrect_answers": [
-        "Anno 1404",
-        "Anno 2205",
-        " Anno 1701"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "medium",
-      "category": "Entertainment: Video Games",
-      "question": "In what engine was Titanfall made in?",
-      "correct_answer": "Source Engine",
-      "incorrect_answers": [
-        "Frostbite 3",
-        "Unreal Engine",
-        "Cryengine"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "medium",
-      "category": "Entertainment: Video Games",
-      "question": "In Portal, what color is the Morality Core?",
-      "correct_answer": "Purple",
-      "incorrect_answers": [
-        "Red",
-        "Yellow",
-        "Blue"
-      ]
-    },
-    {
-      "type": "boolean",
-      "difficulty": "easy",
-      "category": "Entertainment: Video Games",
-      "question": "&quot;Resident Evil 7&quot; is the first first-person Resident Evil game.",
-      "correct_answer": "False",
-      "incorrect_answers": [
-        "True"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "hard",
-      "category": "Geography",
-      "question": "Which of these countries is NOT a part of the Asian continent?",
-      "correct_answer": "Suriname",
-      "incorrect_answers": [
-        "Georgia",
-        "Russia",
-        "Singapore"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "medium",
-      "category": "Entertainment: Video Games",
-      "question": "Which of these is NOT a game under the Worms series?",
-      "correct_answer": "Major Malfunction",
-      "incorrect_answers": [
-        "Crazy Golf",
-        "Clan Wars",
-        "Ultimate Mayhem"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "easy",
-      "category": "Entertainment: Japanese Anime &amp; Manga",
-      "question": "In Ms. Kobayashi&#039;s Dragon Maid, who is Kobayashi&#039;s maid?",
-      "correct_answer": "Tohru",
-      "incorrect_answers": [
-        "Lucoa",
-        "Kanna",
-        "Elma"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "easy",
-      "category": "General Knowledge",
-      "question": "What organ of the body produces bile?",
-      "correct_answer": "Liver",
-      "incorrect_answers": [
-        "Gallbladder",
-        "Pancreas",
-        "Stomach"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "medium",
-      "category": "Entertainment: Film",
-      "question": "Who provided a majority of the songs and lyrics for &quot;Spirit: Stallion of the Cimarron&quot;?",
-      "correct_answer": "Bryan Adams",
-      "incorrect_answers": [
-        "Smash Mouth",
-        "Oasis",
-        "Air Supply"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "easy",
-      "category": "Entertainment: Video Games",
-      "question": "In Portal 2, how did CEO of Aperture Science, Cave Johnson, presumably die?",
-      "correct_answer": "Moon Rock Poisoning",
-      "incorrect_answers": [
-        "Accidentally sending a portal to the Moon",
-        "Slipped in the shower",
-        "Asbestos Poisoning"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "easy",
-      "category": "Science: Mathematics",
-      "question": "What type of angle is greater than 90&deg;?",
-      "correct_answer": "Obtuse",
-      "incorrect_answers": [
-        "Acute",
-        "Right",
-        "Straight"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "easy",
-      "category": "General Knowledge",
-      "question": "In DC comics where does the Green Arrow (Oliver Queen) live?",
-      "correct_answer": "Star City",
-      "incorrect_answers": [
-        "Central City",
-        "Gotham City",
-        "Metropolis"
-      ]
-    },
-    {
-      "type": "boolean",
-      "difficulty": "medium",
-      "category": "Science &amp; Nature",
-      "question": "The planet Mars has two moons orbiting it.",
-      "correct_answer": "True",
-      "incorrect_answers": [
-        "False"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "easy",
-      "category": "General Knowledge",
-      "question": "Which of the following blood component forms a plug at the site of injuries?",
-      "correct_answer": "Platelets",
-      "incorrect_answers": [
-        "Red blood cells",
-        "White blood cells",
-        "Blood plasma"
-      ]
-    },
-    {
-      "type": "multiple",
-      "difficulty": "medium",
-      "category": "Entertainment: Music",
-      "question": "Which artist or group did John Lennon consider &quot;son(s) of the Beatles&quot;?",
-      "correct_answer": "Jeff Lynne&#039;s Electric Light Orchestra",
-      "incorrect_answers": [
-        "The Rolling Stones",
-        "Pink Floyd",
-        "The Who"
-      ]
-    },
-    {
-      "type": "boolean",
-      "difficulty": "easy",
-      "category": "Entertainment: Music",
-      "question": "Muse is a British (English) rock band",
-      "correct_answer": "True",
-      "incorrect_answers": [
-        "False"
-      ]
-    },
-    {
-      "type": "boolean",
-      "difficulty": "medium",
-      "category": "Geography",
-      "question": "The flag of South Africa features 7 colours.",
-      "correct_answer": "False",
-      "incorrect_answers": [
-        "True"
-      ]
-    }
-  ]
-}
+[
+  {
+    "type": "boolean",
+    "difficulty": "easy",
+    "category": "Entertainment: Music",
+    "question": "In 1993, Prince changed his name to an unpronounceable symbol because he was unhappy with his contract with Warner Bros.",
+    "correct_answer": "True",
+    "incorrect_answers": [
+      "False"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Vehicles",
+    "question": "Which of these cars is NOT considered one of the 5 Modern Supercars by Ferrari?",
+    "correct_answer": "Testarossa",
+    "incorrect_answers": [
+      "Enzo Ferrari",
+      "F40",
+      "288 GTO"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Entertainment: Video Games",
+    "question": "What is the item required to summon the boss Duke Fishron in the game Terraria?",
+    "correct_answer": "Truffle Worm",
+    "incorrect_answers": [
+      "Suspicious Looking Fish",
+      "King Grasshopper",
+      "Slug"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Entertainment: Video Games",
+    "question": "Which of the following games in the Anno series introduced the &quot;Eco Balance&quot; gameplay mechanic?",
+    "correct_answer": "Anno 2070",
+    "incorrect_answers": [
+      "Anno 1404",
+      "Anno 2205",
+      " Anno 1701"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Entertainment: Video Games",
+    "question": "In what engine was Titanfall made in?",
+    "correct_answer": "Source Engine",
+    "incorrect_answers": [
+      "Frostbite 3",
+      "Unreal Engine",
+      "Cryengine"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Entertainment: Video Games",
+    "question": "In Portal, what color is the Morality Core?",
+    "correct_answer": "Purple",
+    "incorrect_answers": [
+      "Red",
+      "Yellow",
+      "Blue"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "easy",
+    "category": "Entertainment: Video Games",
+    "question": "&quot;Resident Evil 7&quot; is the first first-person Resident Evil game.",
+    "correct_answer": "False",
+    "incorrect_answers": [
+      "True"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "hard",
+    "category": "Geography",
+    "question": "Which of these countries is NOT a part of the Asian continent?",
+    "correct_answer": "Suriname",
+    "incorrect_answers": [
+      "Georgia",
+      "Russia",
+      "Singapore"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Entertainment: Video Games",
+    "question": "Which of these is NOT a game under the Worms series?",
+    "correct_answer": "Major Malfunction",
+    "incorrect_answers": [
+      "Crazy Golf",
+      "Clan Wars",
+      "Ultimate Mayhem"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Entertainment: Japanese Anime &amp; Manga",
+    "question": "In Ms. Kobayashi&#039;s Dragon Maid, who is Kobayashi&#039;s maid?",
+    "correct_answer": "Tohru",
+    "incorrect_answers": [
+      "Lucoa",
+      "Kanna",
+      "Elma"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What organ of the body produces bile?",
+    "correct_answer": "Liver",
+    "incorrect_answers": [
+      "Gallbladder",
+      "Pancreas",
+      "Stomach"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Entertainment: Film",
+    "question": "Who provided a majority of the songs and lyrics for &quot;Spirit: Stallion of the Cimarron&quot;?",
+    "correct_answer": "Bryan Adams",
+    "incorrect_answers": [
+      "Smash Mouth",
+      "Oasis",
+      "Air Supply"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Entertainment: Video Games",
+    "question": "In Portal 2, how did CEO of Aperture Science, Cave Johnson, presumably die?",
+    "correct_answer": "Moon Rock Poisoning",
+    "incorrect_answers": [
+      "Accidentally sending a portal to the Moon",
+      "Slipped in the shower",
+      "Asbestos Poisoning"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Science: Mathematics",
+    "question": "What type of angle is greater than 90&deg;?",
+    "correct_answer": "Obtuse",
+    "incorrect_answers": [
+      "Acute",
+      "Right",
+      "Straight"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "In DC comics where does the Green Arrow (Oliver Queen) live?",
+    "correct_answer": "Star City",
+    "incorrect_answers": [
+      "Central City",
+      "Gotham City",
+      "Metropolis"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Science &amp; Nature",
+    "question": "The planet Mars has two moons orbiting it.",
+    "correct_answer": "True",
+    "incorrect_answers": [
+      "False"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which of the following blood component forms a plug at the site of injuries?",
+    "correct_answer": "Platelets",
+    "incorrect_answers": [
+      "Red blood cells",
+      "White blood cells",
+      "Blood plasma"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Entertainment: Music",
+    "question": "Which artist or group did John Lennon consider &quot;son(s) of the Beatles&quot;?",
+    "correct_answer": "Jeff Lynne&#039;s Electric Light Orchestra",
+    "incorrect_answers": [
+      "The Rolling Stones",
+      "Pink Floyd",
+      "The Who"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "easy",
+    "category": "Entertainment: Music",
+    "question": "Muse is a British (English) rock band",
+    "correct_answer": "True",
+    "incorrect_answers": [
+      "False"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Geography",
+    "question": "The flag of South Africa features 7 colours.",
+    "correct_answer": "False",
+    "incorrect_answers": [
+      "True"
+    ]
+  }
+]

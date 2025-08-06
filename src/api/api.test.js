@@ -9,4 +9,9 @@ describe('Server to pull random data', async () => {
     console.log(testData);
     expect(testData.length).toBe(2);
   })
+  test('Should pull random data', async () => {
+    let testData = await getQuestions(2);
+    console.log(testData);
+    expect(testData.length).toBe(2);
+  })
 })
