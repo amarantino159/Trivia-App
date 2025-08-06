@@ -6,6 +6,7 @@ let getQuestions = async (amount, difficulty = "", type = "", category = "") => 
   let cat = category != "" ? `category=${category}` : "";
 
   let res = await fetch(`https://opentdb.com/api.php?amount=${amount}&${dif}&${typ}&${cat}`);
+  //need to check for code 5 rate limit error
   let format = await res.json();
   let data = format.results;
 
