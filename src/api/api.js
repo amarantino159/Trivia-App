@@ -8,7 +8,6 @@ let getQuestions = async (amount, difficulty = "", type = "", category = "") => 
   let res = await fetch(`https://opentdb.com/api.php?amount=${amount}&${dif}&${typ}&${cat}`);
   let format = await res.json();
   let data = format.results;
-  console.log(data);
 
   return data;
 }
