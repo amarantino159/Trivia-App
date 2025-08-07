@@ -38,7 +38,7 @@ function QuestionAndAnswer({ questionCard, handleClick,key }) {
   else if (questionCard.type == 'short') {
     return (<>
       <Question key={key} questionText={questionCard.question} />
-      <AnswerShort key={key} answer={questionCard.correct_answer} />
+      <AnswerShort key={key} questionCard={questionCard} answer={questionCard.correct_answer} />
       <button onClick={()=>handleClick((prev)=>++prev)}>Next</button>
 
     </>)
