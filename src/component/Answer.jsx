@@ -6,7 +6,7 @@ import App from './App.jsx'
 
 import '../styles/Answer.css'
 
-function Answer({ answer, falseanswers }) {
+function Answer({questionCard, answer, falseanswers }) {
 
   let [choice, setChoice] = useState('');
   let [possible, setPossible] = useState([]);
@@ -20,10 +20,10 @@ function Answer({ answer, falseanswers }) {
 
 
   useEffect(() => {
-    setPossible([...falseanswers, answer])
-    setPossible((prev) => prev.sort(() => Math.random() - .5))
+    setPossible([...falseanswers, answer].sort(() => Math.random() - .5))
+    //setPossible((prev) => prev.sort(() => Math.random() - .5))
   }
-    , [])
+    , [questionCard])
 
 
   function handleScore() {

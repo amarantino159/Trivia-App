@@ -27,12 +27,12 @@ function QuestionAndAnswer({ questionCard, handleClick,key }) {
   // useEffect(() => {
   //   setCurrentQuestion(questionCard);
   // }, [questionCard])
-
+  console.log(questionCard);
   if (questionCard.type == 'boolean' || questionCard.type == 'multiple') {
     return (<>
       <Question key={key} questionText={questionCard.question} />
-      <Answer key={key} answer={questionCard.correct_answer} falseanswers={questionCard.incorrect_answers} />
-      <button onClick={()=>handleClick((prev)=>++prev)}>Next</button>
+      <Answer key={key} questionCard={questionCard} answer={questionCard.correct_answer} falseanswers={questionCard.incorrect_answers} />
+      <button onClick={()=>handleClick((prev)=>prev+1)}>Next</button>
     </>)
   }
   else if (questionCard.type == 'short') {
