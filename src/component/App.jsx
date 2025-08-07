@@ -7,6 +7,7 @@ import '../styles/App.css'
 
 import { GameOptions } from './GameOptions'
 import QuestionAndAnswer from './QuestionAndAnswer';
+import RoundSummary from './RoundSummary';
 
 function App() {
   const [roundData, setRoundData] = useState([]);
@@ -15,13 +16,19 @@ function App() {
   return (
     <>
       <Link to="/">Home</Link>
+      <br></br>
       <Link to="/options">New Round</Link>
+      <br></br>
       <ScoreContext.Provider value={{ playerScore, setPlayerScore }}>
         <RoundQuestions.Provider value={{ roundData, setRoundData }}>
 
           <Routes>
+            <Route path='/' element={<GameOptions />} />
             <Route path='/options' element={<GameOptions />} />
-            <Route path='/' element={<QuestionAndAnswer />} />
+            <Route path='/qna' element={<QuestionAndAnswer />} />
+            {/* ^^not to be used in a game, just for testing purposes */}
+            <Route path='/RoundSummary' element={<RoundSummary />} />
+            <Route path='/RoundManager' element={<RoundSummary />} />
           </Routes>
 
         </RoundQuestions.Provider>
