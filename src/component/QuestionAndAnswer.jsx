@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Question from './Question.jsx'
 import Answer from './Answer.jsx'
 import AnswerShort from './AnswerShort.jsx'
+import TextCorrect from './TextCorrect'
 
 const dummy = {
   "type": "short",
@@ -21,7 +22,7 @@ const dummy = {
   ]
 };
 
-function QuestionAndAnswer({ questionCard, handleClick,key }) {
+function QuestionAndAnswer({ questionCard, handleClick, key }) {
   // const [currentQuestion, setCurrentQuestion] = useState(questionCard);
 
   // useEffect(() => {
@@ -30,16 +31,16 @@ function QuestionAndAnswer({ questionCard, handleClick,key }) {
   console.log(questionCard);
   if (questionCard.type == 'boolean' || questionCard.type == 'multiple') {
     return (<>
-      <Question key={key} questionText={questionCard.question} />
+      <Question key={key} questionText={TextCorrect(questionCard.question)} />
       <Answer key={key} questionCard={questionCard} answer={questionCard.correct_answer} falseanswers={questionCard.incorrect_answers} />
-      <button onClick={()=>handleClick((prev)=>prev+1)}>Next</button>
+      <button onClick={() => handleClick((prev) => prev + 1)}>Next</button>
     </>)
   }
   else if (questionCard.type == 'short') {
     return (<>
-      <Question key={key} questionText={questionCard.question} />
+      <Question key={key} questionText={TextCorrect(questionCard.question)} />
       <AnswerShort key={key} questionCard={questionCard} answer={questionCard.correct_answer} />
-      <button onClick={()=>handleClick((prev)=>++prev)}>Next</button>
+      <button onClick={() => handleClick((prev) => ++prev)}>Next</button>
 
     </>)
   }
@@ -47,7 +48,7 @@ function QuestionAndAnswer({ questionCard, handleClick,key }) {
     return (<>
       <Question questionText={'Where is the Eiffel Tower?'} />
       <Answer answer={'Paris'} falseanswers={['London', 'Dubai', 'Los Angeles', 'Miami']} />
-      <button onclick={() => handleClick((prev)=>++prev)}>Next</button>
+      <button onclick={() => handleClick((prev) => ++prev)}>Next</button>
     </>)
   }
 
