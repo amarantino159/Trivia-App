@@ -13,7 +13,7 @@ function GameOptions() {
   const { roundData, setRoundData } = useContext(RoundQuestions);
   const { gameData, setGameData } = useContext(GameData);
   let { playerScore, setPlayerScore } = useContext(ScoreContext);
-  
+
   const navigate = useNavigate();
 
   async function GenerateQuestions(formData) {
@@ -35,7 +35,7 @@ function GameOptions() {
 
   return (
     <>
-      <form action={GenerateQuestions}>
+      <form className='option-form' action={GenerateQuestions}>
         <label>Number of Questions:</label><input type="text" name="amount" />
         <label>Difficulty:</label><select name="difficulty">
           <option value="">All</option>
@@ -76,7 +76,7 @@ function GameOptions() {
           <option value="31">Entertainment: Japanese Anime & Manga</option>
           <option value="32">Entertainment: Cartoon & Animations</option>
         </select>
-        <button type="submit">Start Quiz!</button>
+        <button className="startGame" type="submit">Start Quiz!</button>
       </form>
     </>
   )

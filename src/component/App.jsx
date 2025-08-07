@@ -11,6 +11,32 @@ import QuestionAndAnswer from './QuestionAndAnswer';
 import RoundSummary from './RoundSummary';
 import RoundManager from './RoundManager'
 
+
+function TitleBar() {
+  return (
+    <div className="main-header" >
+      <h1>Trivia!</h1>
+      <nav className="header" >
+        <Link to="/"><span>Home</span>
+          <span>Home</span>
+          <span>Home</span>
+          <span>Home</span>
+        </Link>
+          <br></br>
+        <Link to="/options"><span>New Round</span>
+          <span>New Round</span>
+          <span>New Round</span>
+          <span>New Round</span>
+        </Link>
+          <br></br>
+        </nav>
+    </div>
+    )
+}
+
+
+
+
 function App() {
   const [roundData, setRoundData] = useState([]);
   const [playerScore, setPlayerScore] = useState(0);
@@ -18,10 +44,14 @@ function App() {
 
   return (
     <>
-      <Link to="/">Home</Link>
-      <br></br>
-      <Link to="/options">New Round</Link>
-      <br></br>
+            <section className="main-container" >
+  <div class='air air1'></div>
+  <div class='air air2'></div>
+  <div class='air air3'></div>
+  <div class='air air4'></div>
+      </section>
+      <TitleBar/>
+
       <ScoreContext.Provider value={{ playerScore, setPlayerScore }}>
         <RoundQuestions.Provider value={{ roundData, setRoundData }}>
           <GameData.Provider value={{gameData, setGameData}}>
@@ -36,6 +66,7 @@ function App() {
           </GameData.Provider>
         </RoundQuestions.Provider>
       </ScoreContext.Provider>
+
     </>
   )
 }
