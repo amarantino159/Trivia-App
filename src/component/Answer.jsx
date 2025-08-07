@@ -33,7 +33,7 @@ function Answer({questionCard, answer, falseanswers }) {
     if (choice == answer) {
       setPlayerScore(prev => prev + 1)
     }
-  },[choice])
+  },[choice,])
 
 
 

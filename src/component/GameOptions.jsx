@@ -26,7 +26,7 @@ function GameOptions() {
     navigate('/RoundManager');
   }
 
-  console.log(gameData);
+  console.log("SHOW GAME DATA", gameData);
 
   return (
     <>
