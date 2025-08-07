@@ -2,12 +2,14 @@ import { useState, useEffect, useContext } from 'react'
 import { getQuestions } from '../api/api.js'
 import { RoundQuestions } from '../context/RoundQuestions'
 import { BrowserRouter as Router, Routes, Route, Link,useNavigate } from "react-router-dom";
+import { ScoreContext } from "../context/ScoreContext";
 import QuestionAndAnswer from './QuestionAndAnswer';
 import '../styles/App.css'
 
 function RoundManager() {
   const navigate = useNavigate();
   const { roundData } = useContext(RoundQuestions);
+  let { playerScore, setPlayerScore } = useContext(ScoreContext);
   let [questionCount, setQuestionCount] = useState(0);
   let [currentQuestion, setCurrentQuestion] = useState(roundData[0]);
 
@@ -45,6 +47,7 @@ function RoundManager() {
 
   function RoundSummary() {
     //goto Round Summary page
+    
     navigate('/RoundSummary')
     alert('end of round');
   }

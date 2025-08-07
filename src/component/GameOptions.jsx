@@ -3,6 +3,7 @@ import { getQuestions } from '../api/api.js'
 import { RoundQuestions } from '../context/RoundQuestions'
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 import {GameData} from '../context/GameDataContext.js'
+import { ScoreContext } from "../context/ScoreContext"
 import '../styles/App.css'
 
 
@@ -11,6 +12,7 @@ import '../styles/App.css'
 function GameOptions() {
   const { roundData, setRoundData } = useContext(RoundQuestions);
   const { gameData, setGameData } = useContext(GameData);
+  let { playerScore, setPlayerScore } = useContext(ScoreContext);
   
   const navigate = useNavigate();
 
@@ -23,6 +25,9 @@ function GameOptions() {
     let data = await getQuestions(amount, difficulty, type, category);
     console.log(data);
     setRoundData(data);
+
+    setPlayerScore(0);
+
     navigate('/RoundManager');
   }
 

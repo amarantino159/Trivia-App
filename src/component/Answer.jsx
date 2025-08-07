@@ -38,6 +38,8 @@ function Answer({questionCard, answer, falseanswers }) {
 
 
 
+
+
   return (<>
     <div className="answer-container">
     {possible.map((elm, index) => <button name='possible_answers' className={ "a" + index} onClick={() => {
