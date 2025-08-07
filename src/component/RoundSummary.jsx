@@ -8,6 +8,8 @@ import Answer from './Answer.jsx'
 import AnswerShort from './AnswerShort.jsx'
 import { ScoreContext } from "../context/ScoreContext"
 import { RoundQuestions } from "../context/RoundQuestions"
+import {GameData} from '../context/GameDataContext.js'
+
 
 
 
@@ -17,6 +19,11 @@ function RoundSummary() {
   const navigate = useNavigate();
   let { playerScore, setPlayerScore } = useContext(ScoreContext);
   const { roundData, setRoundData } = useContext(RoundQuestions);
+  const { gameData, setGameData } = useContext(GameData);
+
+  useEffect(() => {
+    setGameData([...gameData, playerScore]);
+  }, []);
 
   return (<>
     <h1>Your Score is {playerScore}!</h1>
