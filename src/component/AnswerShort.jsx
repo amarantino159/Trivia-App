@@ -10,15 +10,20 @@ function AnswerShort({ answer }) {
 
   let [choice, setChoice] = useState('');
   let { playerScore, setPlayerScore } = useContext(ScoreContext);
+  let [answered,setAnswered] = useState(false);
 
   return (<>
     <input id='inputtext' type='text'></input>
     <button onClick={()=>{
       let userinput = document.getElementById('inputtext')
-      setChoice(userinput.value)
-      if(choice == answer){
-        setPlayerScore(playerScore+1);
+      if(!answered){
+        setChoice(userinput.value)
+        if(choice == answer){
+          setPlayerScore(playerScore+1);
+        }
+        setAnswered(true)
       }
+
     }}>Submit</button>
 
     <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice}</h1>

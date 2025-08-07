@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect, createContext } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { UNSAFE_WithComponentProps, useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { ScoreContext } from "../context/ScoreContext";
 import App from './App.jsx'
@@ -11,6 +11,7 @@ function Answer({questionCard, answer, falseanswers }) {
   let [choice, setChoice] = useState('');
   let [possible, setPossible] = useState([]);
   let { playerScore, setPlayerScore } = useContext(ScoreContext);
+  let [answered,setAnswered] = useState(false);
 
 
   // add answer to falseanswers and shuffle
@@ -39,13 +40,11 @@ function Answer({questionCard, answer, falseanswers }) {
 
   return (<>
     <div className="answer-container">
-    {possible.map((elm, index) => <button id='possible_answers' className={ "a" + index} onClick={() => {
-      setChoice(elm)
-      // if(choice == answer){
-      //   handleScore()
-
-      // };
-
+    {possible.map((elm, index) => <button name='possible_answers' className={ "a" + index} onClick={() => {
+      if(!answered){
+        setChoice(elm)
+        setAnswered(true)
+      }
     }}>{elm}</button>)}
     </div>
     <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice}</h1>
