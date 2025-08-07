@@ -2,11 +2,17 @@
 
 function TextCorrect(text) {
   let input = text;
-  let correctedText = input.replace(/[^a-zA-Z0-9]/g, "");
+
+
+  let correctedText = input.replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'");
 
   return correctedText;
 }
 
 
 
-export { TextCorrect }
+export default TextCorrect
