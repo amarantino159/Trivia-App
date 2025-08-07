@@ -39,12 +39,13 @@ function Answer({questionCard, answer, falseanswers }) {
 
   return (<>
     <div className="answer-container">
-    {possible.map((elm, index) => <button className={ "a" + index} onClick={() => {
+    {possible.map((elm, index) => <button id='possible_answers' className={ "a" + index} onClick={() => {
       setChoice(elm)
       // if(choice == answer){
       //   handleScore()
 
       // };
+
     }}>{elm}</button>)}
     </div>
     <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice}</h1>
