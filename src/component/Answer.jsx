@@ -26,9 +26,14 @@ function Answer({ answer, falseanswers }) {
     , [])
 
 
-  function handleScore() {
+  // function handleScore() {
+  //     setPlayerScore(prev => ++prev)
+  // }
+  useEffect(() => {
+    if (choice == answer) {
       setPlayerScore(prev => prev + 1)
-  }
+    }
+  },[choice])
 
 
 
@@ -36,10 +41,10 @@ function Answer({ answer, falseanswers }) {
     <div className="answer-container">
     {possible.map((elm, index) => <button className={ "a" + index} onClick={() => {
       setChoice(elm)
-      if(choice == answer){
-        handleScore()
+      // if(choice == answer){
+      //   handleScore()
 
-      };
+      // };
     }}>{elm}</button>)}
     </div>
     <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice}</h1>
