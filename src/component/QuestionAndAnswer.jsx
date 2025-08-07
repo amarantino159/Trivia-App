@@ -1,6 +1,6 @@
-import { useState,useContext,useEffect,createContext } from 'react'
+import { useState, useContext, useEffect, createContext } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import App from './App.jsx'
 import Question from './Question.jsx'
@@ -21,29 +21,28 @@ const dummy = {
   ]
 };
 
-function QuestionAndAnswer({ questionCard = dummy }) {
+function QuestionAndAnswer({ questionCard, handleClick }) {
 
-  if(questionCard.type == 'boolean'||questionCard.type=='multiple')
-  {
+  if (questionCard.type == 'boolean' || questionCard.type == 'multiple') {
     return (<>
-    <Question questionText={questionCard.question}/>
-    <Answer answer={questionCard.correct_answer} falseanswers={questionCard.incorrect_answers} />
+      <Question questionText={questionCard.question} />
+      <Answer answer={questionCard.correct_answer} falseanswers={questionCard.incorrect_answers} />
       <button  >Next</button>
     </>)
   }
-  else if(questionCard.type =='short'){
+  else if (questionCard.type == 'short') {
     return (<>
-    <Question questionText={questionCard.question}/>
+      <Question questionText={questionCard.question} />
       <AnswerShort answer={questionCard.correct_answer} />
-      <button  >Next</button>
+      <button onclick={() => handleClick}>Next</button>
 
     </>)
   }
-  else{
+  else {
     return (<>
-    <Question questionText={'Where is the Eiffel Tower?'}/>
+      <Question questionText={'Where is the Eiffel Tower?'} />
       <Answer answer={'Paris'} falseanswers={['London', 'Dubai', 'Los Angeles', 'Miami']} />
-      <button  >Next</button>
+      <button onclick={() => handleClick}>Next</button>
     </>)
   }
 

@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react'
 import { getQuestions } from '../api/api.js'
 import { RoundQuestions } from '../context/RoundQuestions'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { QuestionAndAnswer } from './QuestionAndAnswer';
+import QuestionAndAnswer from './QuestionAndAnswer';
 import '../styles/App.css'
 
 function RoundManager() {
@@ -13,7 +13,7 @@ function RoundManager() {
    * show a different questionandanswercomponenet */
 
   const questionCount = roundData.length;
-  const currentQuestion = 0;
+  let currentQuestion = 0;
 
   function NextQuestion() {
     currentQuestion < questionCount ? currentQuestion += 1 : RoundSummary();
@@ -23,6 +23,9 @@ function RoundManager() {
   function RoundSummary() {
     //goto Round Summary page
   }
+
+  console.log(roundData)
+  console.log(roundData[currentQuestion])
 
 
 
@@ -38,3 +41,5 @@ function RoundManager() {
     </>
   )
 }
+
+export default RoundManager
