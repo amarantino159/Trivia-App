@@ -16,22 +16,39 @@ function RoundManager() {
    * Once question is finished,
    * show a different questionandanswercomponenet */
 
-  useEffect(() => {
-    setCurrentQuestion(roundData[questionCount]);
+  // useEffect(() => {
+  //   console.log('made it here')
+  //   if(questionCount<roundLength){
+  //     setCurrentQuestion(roundData[questionCount]);
+  //   }
+  //   else{
+  //     RoundSummary();
+  //   }
+  //   console.log(questionCount)
+  //   console.log('going to next question')
 
-  }, [questionCount])
+  // }, [questionCount])
+  useEffect(()=>{
+    setCurrentQuestion(roundData[questionCount]);
+  },[questionCount])
 
   function NextQuestion() {
-    console.log('going to next question')
-    questionCount < roundLength ? setQuestionCount(questionCount++) : RoundSummary();
+    //console.log('made it here')
+    if(questionCount + 1 < roundLength)
+    { setQuestionCount(questionCount + 1)
+      //console.log(questionCount)
+    }
+    else{ RoundSummary()};
+
   }
 
   function RoundSummary() {
     //goto Round Summary page
+    alert('end of round');
   }
 
-  console.log(roundData)
-  console.log(roundData[currentQuestion])
+  //console.log(roundData)
+  //console.log(roundData[questionCount])
 
 
 
