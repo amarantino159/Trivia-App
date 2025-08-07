@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 import { getQuestions } from '../api/api.js'
 import { RoundQuestions } from '../context/RoundQuestions'
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 import '../styles/App.css'
 
 
@@ -9,6 +9,7 @@ import '../styles/App.css'
 //need amount (no less than 1), difficulty, type, and category
 function GameOptions() {
   const { roundData, setRoundData } = useContext(RoundQuestions);
+  const navigate = useNavigate();
 
   async function GenerateQuestions(formData) {
     const amount = formData.get('amount');
@@ -19,6 +20,7 @@ function GameOptions() {
     let data = await getQuestions(amount, difficulty, type, category);
     console.log(data);
     setRoundData(data);
+    navigate('/RoundManager');
   }
 
   return (

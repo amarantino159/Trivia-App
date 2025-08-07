@@ -22,19 +22,24 @@ const dummy = {
 };
 
 function QuestionAndAnswer({ questionCard, handleClick }) {
+  const [currentQuestion, setCurrentQuestion] = useState(questionCard);
 
-  if (questionCard.type == 'boolean' || questionCard.type == 'multiple') {
+  useEffect(() => {
+    setCurrentQuestion(questionCard);
+  }, [questionCard])
+
+  if (currentQuestion.type == 'boolean' || currentQuestion.type == 'multiple') {
     return (<>
-      <Question questionText={questionCard.question} />
-      <Answer answer={questionCard.correct_answer} falseanswers={questionCard.incorrect_answers} />
-      <button  >Next</button>
+      <Question questionText={currentQuestion.question} />
+      <Answer answer={currentQuestion.correct_answer} falseanswers={currentQuestion.incorrect_answers} />
+      <button onClick={handleClick}>Next</button>
     </>)
   }
-  else if (questionCard.type == 'short') {
+  else if (currentQuestion.type == 'short') {
     return (<>
-      <Question questionText={questionCard.question} />
-      <AnswerShort answer={questionCard.correct_answer} />
-      <button onclick={() => handleClick}>Next</button>
+      <Question questionText={currentQuestion.question} />
+      <AnswerShort answer={currentQuestion.correct_answer} />
+      <button onClick={handleClick}>Next</button>
 
     </>)
   }
@@ -42,7 +47,7 @@ function QuestionAndAnswer({ questionCard, handleClick }) {
     return (<>
       <Question questionText={'Where is the Eiffel Tower?'} />
       <Answer answer={'Paris'} falseanswers={['London', 'Dubai', 'Los Angeles', 'Miami']} />
-      <button onclick={() => handleClick}>Next</button>
+      <button onclick={() => handleClick()}>Next</button>
     </>)
   }
 

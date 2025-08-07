@@ -7,17 +7,23 @@ import '../styles/App.css'
 
 function RoundManager() {
   const { roundData } = useContext(RoundQuestions);
+  let [questionCount, setQuestionCount] = useState(0);
+  let [currentQuestion, setCurrentQuestion] = useState(roundData[0]);
+
+  const [roundLength, setRoundLength] = useState(roundData.length);
   /**for each question in roundData,
    * generate a single questionandanswer component.
    * Once question is finished,
    * show a different questionandanswercomponenet */
 
-  const questionCount = roundData.length;
-  let currentQuestion = 0;
+  useEffect(() => {
+    setCurrentQuestion(roundData[questionCount]);
+
+  }, [questionCount])
 
   function NextQuestion() {
-    currentQuestion < questionCount ? currentQuestion += 1 : RoundSummary();
-
+    console.log('going to next question')
+    questionCount < roundLength ? setQuestionCount(questionCount++) : RoundSummary();
   }
 
   function RoundSummary() {
@@ -33,7 +39,7 @@ function RoundManager() {
   return (
     <>
 
-      <QuestionAndAnswer questionCard={roundData[currentQuestion]} handleClick={NextQuestion} />
+      <QuestionAndAnswer questionCard={currentQuestion} handleClick={NextQuestion} key={questionCount} />
 
 
 

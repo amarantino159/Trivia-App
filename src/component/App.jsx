@@ -8,6 +8,7 @@ import '../styles/App.css'
 import { GameOptions } from './GameOptions'
 import QuestionAndAnswer from './QuestionAndAnswer';
 import RoundSummary from './RoundSummary';
+import RoundManager from './RoundManager'
 
 function App() {
   const [roundData, setRoundData] = useState([]);
@@ -28,7 +29,7 @@ function App() {
             <Route path='/qna' element={<QuestionAndAnswer />} />
             {/* ^^not to be used in a game, just for testing purposes */}
             <Route path='/RoundSummary' element={<RoundSummary />} />
-            <Route path='/RoundManager' element={<RoundSummary />} />
+            <Route path='/RoundManager' element={<RoundManager />} />
           </Routes>
 
         </RoundQuestions.Provider>
