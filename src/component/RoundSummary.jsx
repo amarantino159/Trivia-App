@@ -21,8 +21,9 @@ function RoundSummary() {
   return (<>
     <h1>Your Score is {playerScore}!</h1>
     <h2>Keep up the good work!</h2>
-    <h2>You have answered {playerScore} out of {roundData.amount}! </h2>
-    <h2>The next round is {roundData.category} with {roundData.difficulty} difficulty and {roundData.amount} questions!</h2>
+    <h2>You have answered {playerScore} out of {roundData.length}! </h2>
+    <h2>The next round is {roundData[0].category} with {roundData[0].difficulty} difficulty and {roundData.length} questions!</h2>
+    {/* make new context that preserves the user options for future reference */}
     <h3>Good Luck!</h3>
 
     <button onClick={(() => navigate('/RoundManager'))}>Go to next Round of Questions!</button>
