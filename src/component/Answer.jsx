@@ -6,14 +6,15 @@ import App from './App.jsx'
 
 import '../styles/Answer.css'
 
-function Answer({questionCard, answer, falseanswers }) {
+function Answer({questionCard }) {
 
   let [choice, setChoice] = useState('');
   let [possible, setPossible] = useState([]);
   let { playerScore, setPlayerScore } = useContext(ScoreContext);
   let [answered,setAnswered] = useState(false);
 
-
+  let falseanswers = questionCard.incorrect_answers;
+  let answer = questionCard.correct_answer;
   // add answer to falseanswers and shuffle
   // map falseanswers to buttons
   // each button has onClick to check if button value and answer ===
