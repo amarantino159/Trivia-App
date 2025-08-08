@@ -1,9 +1,10 @@
-import { vi, expect, it, test, describe } from "vitest";
+import { vi, expect, it, test, describe, beforeEach } from "vitest";
 import { useState } from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event'
 import Answer from "../component/Answer.jsx";
 import { ScoreContext } from "../context/ScoreContext";
+import App from '../component/App.jsx'
 
 const dummyM = {
   // "type": "short",
@@ -32,6 +33,11 @@ const dummyT = {
 
 
 describe('check if buttons are made for multiple choice', () => {
+  // beforeEach(() => {
+  //   const setPlayerScore = vi.fn();
+  //   const useStateMock = (playerScore) => [playerScore, setPlayerScore];
+  //   vi.spyOn(React, 'useState').mockImplementation(useStateMock);
+  // })
   test('check if 4 buttons are made for multiple choice', () => {
     render(<Answer questionCard={dummyM} />);
     let btns = screen.getAllByRole('button');
@@ -68,8 +74,13 @@ describe('check if buttons are made for true/false choice', () => {
     btns.forEach(elm => expect(elm.innerHTML).toBeOneOf(["False", "True"]));
   });
   test('check if clicking works', async () => {
-    const [playerScore, setPlayerScore] = useState(0);
-    render(<ScoreContext.Provider value={{ playerScore, setPlayerScore }}><Answer questionCard={dummyT} /></ScoreContext.Provider>);
+    const setPlayerScore = vi.fn();
+    const contextValue = {
+      playerScore: 0,
+      setPlayerScore,
+    }
+    //const [playerScore, setPlayerScore] = useState(0);
+    render(<ScoreContext.Provider value={contextValue}><Answer questionCard={dummyT} /></ScoreContext.Provider>);
     let btns = screen.getAllByRole('button');
     await userEvent.click(btns[0]);
     let h = screen.getAllByRole('heading');
