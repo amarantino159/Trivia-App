@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { ScoreContext } from "../context/ScoreContext";
 import App from './App.jsx'
+// import '../styles/Answer.css'
 
 import '../styles/AnswerShort.css'
 
@@ -31,7 +32,7 @@ function AnswerShort({ answer }) {
 
     }}>Submit</button>
 
-    <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice == answer ? `Correct: ${choice}` : choice== '' ? '' :  `Incorrect: ${choice}` }</h1>
+    <h1 className={(choice == answer) ? 'short-correct' : 'short-wrong'} >{choice == answer ? `Correct: ${choice}` : choice== '' ? '' :  `Incorrect: ${choice}` }</h1>
     <h2>{playerScore}</h2>
   </>)
 }

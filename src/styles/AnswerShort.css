@@ -1,6 +1,10 @@
-.correct{
-  color:green
+.short-correct{
+  color:green;
+  position: relative;
+  bottom: 5px;
 }
-.wrong{
-  color:red
+.short-wrong{
+  color:red;
+   position: relative;
+   bottom: 5px;
 }
