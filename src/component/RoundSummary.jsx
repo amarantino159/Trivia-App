@@ -9,7 +9,7 @@ import Answer from './Answer.jsx'
 import AnswerShort from './AnswerShort.jsx'
 import { ScoreContext } from "../context/ScoreContext"
 import { RoundQuestions } from "../context/RoundQuestions"
-import {GameData} from '../context/GameDataContext.js'
+import { GameData } from '../context/GameDataContext.js'
 
 
 
@@ -36,7 +36,7 @@ function RoundSummary() {
 
     {/* make new context that preserves the user options for future reference */}
     <h3 className="goodluck" >Good Luck!</h3>
-    <button onClick={(() => {setPlayerScore(0); navigate('/RoundManager')})}>Go to next Round of Questions!</button>
+    <button onClick={(() => { setPlayerScore(0); navigate('/options') })}>Go to next Round of Questions!</button>
   </>)
 }
 
