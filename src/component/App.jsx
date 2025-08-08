@@ -12,7 +12,7 @@ import RoundSummary from './RoundSummary';
 import RoundManager from './RoundManager'
 
 
-function TitleBar() {
+ export function TitleBar() {
   return (
     <div className="main-header" >
       <h1>Trivia!</h1>
@@ -33,6 +33,7 @@ function TitleBar() {
     </div>
     )
 }
+
 
 
 
