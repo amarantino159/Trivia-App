@@ -33,14 +33,14 @@ function QuestionAndAnswer({ questionCard, handleClick, key }) {
   if (questionCard.type == 'boolean' || questionCard.type == 'multiple') {
     return (<>
       <Question key={key} questionText={TextCorrect(questionCard.question)} />
-      <Answer key={key} questionCard={questionCard} answer={questionCard.correct_answer} falseanswers={questionCard.incorrect_answers} />
+      <Answer key={key} questionCard={questionCard} answer={TextCorrect(questionCard.correct_answer)} falseanswers={questionCard.incorrect_answers} />
       <button className="button-next" onClick={() => handleClick((prev) => prev + 1)}>Next</button>
     </>)
   }
   else if (questionCard.type == 'short') {
     return (<>
       <Question key={key} questionText={TextCorrect(questionCard.question)} />
-      <AnswerShort key={key} questionCard={questionCard} answer={questionCard.correct_answer} />
+      <AnswerShort key={key} questionCard={questionCard} answer={TextCorrect(questionCard.correct_answer)} />
       <button onClick={() => handleClick((prev) => prev + 1)}>Next</button>
 
 
@@ -50,7 +50,7 @@ function QuestionAndAnswer({ questionCard, handleClick, key }) {
     return (<>
       <Question questionText={'Where is the Eiffel Tower?'} />
       <Answer answer={'Paris'} falseanswers={['London', 'Dubai', 'Los Angeles', 'Miami']} />
-      <button className="button-next"  onclick={() => handleClick((prev) => ++prev)}>Next</button>
+      <button className="button-next" onclick={() => handleClick((prev) => ++prev)}>Next</button>
     </>)
   }
 
