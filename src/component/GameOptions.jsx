@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react
 import { GameData } from '../context/GameDataContext.js'
 import { ScoreContext } from "../context/ScoreContext"
 import '../styles/App.css'
+import '../styles/GameOptions.css'
 
 
 //user inputs options in a form and then generates a list of questions
@@ -24,16 +25,16 @@ function GameOptions() {
 
 
 
-    if(type=='short'){
-      type='multiple'
+    if (type == 'short') {
+      type = 'multiple'
       let data = await getQuestions(amount, difficulty, type, category);
       console.log(data);
-      data.forEach(elm=>elm.type='short')
+      data.forEach(elm => elm.type = 'short')
       setRoundData(data);
       console.log(data)
 
     }
-    else{
+    else {
       let data = await getQuestions(amount, difficulty, type, category);
       console.log(data);
       setRoundData(data);
