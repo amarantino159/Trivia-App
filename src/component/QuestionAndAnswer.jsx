@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect, createContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "../styles/QuestionAndAnswer.css"
 
 import App from './App.jsx'
 import Question from './Question.jsx'
@@ -33,7 +34,7 @@ function QuestionAndAnswer({ questionCard, handleClick, key }) {
     return (<>
       <Question key={key} questionText={TextCorrect(questionCard.question)} />
       <Answer key={key} questionCard={questionCard} answer={questionCard.correct_answer} falseanswers={questionCard.incorrect_answers} />
-      <button onClick={() => handleClick((prev) => prev + 1)}>Next</button>
+      <button className="button-next" onClick={() => handleClick((prev) => prev + 1)}>Next</button>
     </>)
   }
   else if (questionCard.type == 'short') {
@@ -42,13 +43,14 @@ function QuestionAndAnswer({ questionCard, handleClick, key }) {
       <AnswerShort key={key} questionCard={questionCard} answer={questionCard.correct_answer} />
       <button onClick={() => handleClick((prev) => prev + 1)}>Next</button>
 
+
     </>)
   }
   else {
     return (<>
       <Question questionText={'Where is the Eiffel Tower?'} />
       <Answer answer={'Paris'} falseanswers={['London', 'Dubai', 'Los Angeles', 'Miami']} />
-      <button onclick={() => handleClick((prev) => ++prev)}>Next</button>
+      <button className="button-next"  onclick={() => handleClick((prev) => ++prev)}>Next</button>
     </>)
   }
 

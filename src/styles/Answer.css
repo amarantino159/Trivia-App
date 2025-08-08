@@ -1,40 +1,161 @@
 .correct{
-  color:green
+  color:green;
+  position: relative;
+  bottom: 60px;
 }
 .wrong{
-  color:red
+  color:red;
+   position: relative;
+   bottom: 60px;
 }
 
 .a0{
-  background-color: magenta;
   font-weight: 800;
-  color: rgba(255, 255, 0, 0.932);
-  grid-area: 1/ 1/ 1/ 2;
+  grid-area: 1/ 2/ 1/ 2;
+  background-color: rgb(42,43,131);
+  color: white;
 
 }
 .a1{
-  background-color: blue;
-  color: white;
   font-weight: 800;
-   grid-area: 1/ 2/ 1/ 2;
+  grid-area: 1/ 3/ 1/ 3;
+  background-color: rgb(42,43,131);
+  color: white;
 }
 .a2{
-  background-color: yellow;
   font-weight: 800;
-  color: red;
+  grid-area: 2/ 2/ 2/ 2;
+  background-color: rgb(42,43,131);
+  color: white;
+
 }
 .a3{
-  background-color: green;
-  color: white;
   font-weight: 800;
+  grid-area: 2/ 3/ 2/ 3;
+  background-color: rgb(42,43,131);
+  color: white;
 }
 
 .answer-container{
   display: grid;
-  grid-template-columns: 40% 40%;
+  grid-template-columns: 10% 40% 40% 10%;
   grid-template-rows: 40% 40%;
-  width: 50%vh;
+  width: 100%;
   height: 400px;
-  margin-left: 120px;
+}
 
+.a0 {
+  text-decoration: none;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+}
+
+.a0:hover {
+  box-shadow: 1px 1px 25px 10px rgba(7, 88, 21, 0.4);
+}
+
+.a0:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(146, 148, 248, 0.4),
+      transparent);
+  transition: all 650ms;
+}
+
+.a0:hover:before {
+  left: 100%;
+}
+
+.a1 {
+  text-decoration: none;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+}
+
+.a1:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.a1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(146, 148, 248, 0.4),
+      transparent);
+  transition: all 650ms;
+}
+
+.a1:hover:before {
+  left: 100%;
+}
+
+.a2 {
+  text-decoration: none;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+}
+
+.a2:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.a2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(146, 148, 248, 0.4),
+      transparent);
+  transition: all 650ms;
+}
+
+.a2:hover:before {
+  left: 100%;
+}
+
+.a3 {
+  text-decoration: none;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+}
+
+.a3:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.a3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(146, 148, 248, 0.4),
+      transparent);
+  transition: all 650ms;
+}
+
+.a3:hover:before {
+  left: 100%;
 }
