@@ -43,7 +43,7 @@ function Answer({questionCard }) {
 
   return (<>
     <div className="answer-container">
-    {possible.map((elm, index) => <button name='possible_answers' className={ "a" + index} onClick={() => {
+    {possible.map((elm, index) => <button name='possible_answers'  className={ "a" + index} onClick={() => {
       if(!answered){
         setChoice(elm)
         setAnswered(true)
@@ -51,7 +51,7 @@ function Answer({questionCard }) {
     }}>{elm}</button>)}
     </div>
     <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice}</h1>
-    <h2>{playerScore}</h2>
+    <h2>{`Points: ${playerScore}`}</h2>
   </>)
 }
 
