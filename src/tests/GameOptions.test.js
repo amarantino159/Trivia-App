@@ -17,7 +17,7 @@ describe('GameOptions Test Functions', async () => {
       type: "",
       category: ""
     }
-    GenerateQuestions(mockData);
+    getQuestions(mockData);
     expect(getQuestions).toHaveBeenCalled();
     //expect(roundSpy).toHaveBeenCalled();
   })

@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react'
 import { getQuestions } from '../api/api.js'
 import { RoundQuestions } from '../context/RoundQuestions'
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
-import {GameData} from '../context/GameDataContext.js'
+import { GameData } from '../context/GameDataContext.js'
 import { ScoreContext } from "../context/ScoreContext"
 import '../styles/App.css'
 
