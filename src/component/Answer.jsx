@@ -50,7 +50,7 @@ function Answer({questionCard }) {
       }
     }}>{elm}</button>)}
     </div>
-    <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice}</h1>
+    <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice == answer ? `Correct: ${choice}` : choice== '' ? '' :  `Incorrect: ${choice}` }</h1>
     <h2>{`Points: ${playerScore}`}</h2>
   </>)
 }
