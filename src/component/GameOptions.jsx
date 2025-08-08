@@ -50,7 +50,7 @@ function GameOptions() {
   return (
     <>
       <form className='option-form' action={GenerateQuestions}>
-        <label>Number of Questions:</label><input type="text" name="amount" />
+        <label>Number of Questions:</label><input type="text" name="amount" required='true' defaultValue='10' />
         <label>Difficulty:</label><select name="difficulty">
           <option value="">All</option>
           <option value="easy">Easy</option>
