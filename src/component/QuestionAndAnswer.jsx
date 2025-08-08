@@ -40,7 +40,7 @@ function QuestionAndAnswer({ questionCard, handleClick, key }) {
     return (<>
       <Question key={key} questionText={TextCorrect(questionCard.question)} />
       <AnswerShort key={key} questionCard={questionCard} answer={questionCard.correct_answer} />
-      <button onClick={() => handleClick((prev) => ++prev)}>Next</button>
+      <button onClick={() => handleClick((prev) => prev + 1)}>Next</button>
 
     </>)
   }
