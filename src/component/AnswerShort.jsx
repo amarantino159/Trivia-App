@@ -31,7 +31,7 @@ function AnswerShort({ answer }) {
 
     }}>Submit</button>
 
-    <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice}</h1>
+    <h1 className={(choice == answer) ? 'correct' : 'wrong'} >{choice == answer ? `Correct: ${choice}` : choice== '' ? '' :  `Incorrect: ${choice}` }</h1>
     <h2>{playerScore}</h2>
   </>)
 }
