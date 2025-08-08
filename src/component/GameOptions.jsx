@@ -19,12 +19,25 @@ function GameOptions() {
   async function GenerateQuestions(formData) {
     const amount = formData.get('amount');
     const difficulty = formData.get('difficulty');
-    const type = formData.get('type');
+    let type = formData.get('type');
     const category = formData.get('category');;
 
-    let data = await getQuestions(amount, difficulty, type, category);
-    console.log(data);
-    setRoundData(data);
+
+
+    if(type=='short'){
+      type='multiple'
+      let data = await getQuestions(amount, difficulty, type, category);
+      console.log(data);
+      data.forEach(elm=>elm.type='short')
+      setRoundData(data);
+      console.log(data)
+
+    }
+    else{
+      let data = await getQuestions(amount, difficulty, type, category);
+      console.log(data);
+      setRoundData(data);
+    }
 
     setPlayerScore(0);
 
@@ -47,6 +60,7 @@ function GameOptions() {
           <option value="">All</option>
           <option value="multiple">Multiple Choice</option>
           <option value="boolean">True/False</option>
+          <option value="short">Short Answer (double points!)</option>
         </select>
         <label>Category:</label><select name="category">
           <option value="">All</option>
