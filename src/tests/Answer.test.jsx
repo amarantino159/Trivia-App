@@ -51,7 +51,12 @@ describe('check if buttons are made for multiple choice', () => {
     btns.forEach(elm => expect(elm.innerHTML).toBeOneOf(["Testarossa", "Enzo Ferrari", "F40", "288 GTO"]));
   });
   test('check if clicking works', async () => {
-    render(<Answer questionCard={dummyM} />);
+    const setPlayerScore = vi.fn();
+    const contextValue = {
+      playerScore: 0,
+      setPlayerScore,
+    }
+    render(<ScoreContext.Provider value={contextValue}><Answer questionCard={dummyM} /></ScoreContext.Provider>);
     let btns = screen.getAllByRole('button');
     waitFor(() => userEvent.click(btns[0]));
     let h = screen.getAllByRole('heading');
